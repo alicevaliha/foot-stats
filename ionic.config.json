@@ -1,0 +1,8 @@
+{
+  "name": "foot-stats",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "858ec3df"
+}
