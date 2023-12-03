@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Statistiques générales
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content >
+  
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Général</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-item>
+    <ion-button (click)='getJoueurs()'>Général</ion-button>
+    <ion-button (click)='getJoueurs()'>Domicile</ion-button>
+    <ion-button (click)='getJoueurs()'>Exterieur</ion-button>
+  </ion-item>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

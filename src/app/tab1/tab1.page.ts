@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public api:ApiService) {}
+  
+  getJoueurs(){
+      this.api.getJoueurs().subscribe(result => {
+        console.log(result);
+      });
+  }
 
 }
