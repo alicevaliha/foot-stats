@@ -34,9 +34,38 @@ table{
  th{
     width: 20%;
  }
- td{
+td {
     background-color: white;
     color: rgb(76, 76, 76);
     font-size: x-small;
- }
+}
+tr {
+    height: 30%;
+}
+
+td:hover {
+    background-color: #b9b9b9; /* Couleur gris pale pour le hover */
+}
+
+span {
+    display: inline-block; /* Permet d'appliquer des propriétés de largeur/hauteur et de centrer le texte */
+    padding: 4px; /* Espace intérieur autour du texte */
+    margin: 2px; /* Marge autour de la bordure pour éviter la superposition */
+    border: 1px solid; /* Bordure de 1 pixel */
+    color: white; /* Couleur du texte */
+}
+
+span[style*="color:red"] {
+    border-color: red; /* Couleur de la bordure pour le span avec la couleur rouge */
+    background-color: red; /* Couleur de remplissage pour le span avec la couleur rouge */
+}
+
+span[style*="color:rgb(255, 230, 0)"] {
+    border-color: rgb(255, 230, 0); /* Couleur de la bordure pour le span avec la couleur jaune */
+    background-color: rgb(255, 230, 0); /* Couleur de remplissage pour le span avec la couleur jaune */
+}
+
+
+
+
 

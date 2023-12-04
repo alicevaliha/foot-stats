@@ -14,10 +14,12 @@
     </ion-toolbar>
   </ion-header>
   <ion-item>
-    <ion-button>Général</ion-button>
-    <ion-button>Domicile</ion-button>
-    <ion-button>Exterieur</ion-button>
+    <ion-button id="open-toast">Général</ion-button>
+    <ion-button id="open-toast">Domicile</ion-button>
+    <ion-button id="open-toast">Exterieur</ion-button>
   </ion-item>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-content class="ion-padding">
+    <ion-toast trigger="open-toast" message="Section disponible bientôt ^^" [duration]="5000"></ion-toast>
+  </ion-content>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>

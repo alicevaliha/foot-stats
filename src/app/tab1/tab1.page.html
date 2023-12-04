@@ -30,16 +30,16 @@
         <th>Note</th>
       </tr>
       <tr *ngFor=" let item of statData">
-        <td>{{item.equipe}}</td>
-        <td>{{item.competition_buts}}</td>
-        <td>{{item.total_buts}}</td>
+        <td>{{item.nomequipe}}</td>
+        <td>{{item.nomcompetition}}</td>
+        <td>{{item.nombre_but_total}}</td>
         <td>{{item.moyenne_tirs_par_match | number:'1.1-1'}}</td>
         <td>
           <span style="color:red">{{item.total_cartons_rouges}}</span>
             -
           <span style="color:rgb(255, 230, 0)">{{item.total_cartons_jaunes}}</span>
         </td>
-        <td>{{ item.moyenne_possession_par_match | number:'1.1-1' }} %</td>
+        <td>{{ item.pourcentage_possession | number:'1.1-1' }} %</td>
         <td>{{item.pourcentage_passes_reussies | number:'1.1-1' }}</td>
         <td>---</td>
       </tr>

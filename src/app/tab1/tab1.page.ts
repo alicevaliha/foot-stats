@@ -16,7 +16,7 @@ export class Tab1Page {
   
   getGeneral() {
     this.api.getStatgeneral().subscribe(result => {
-      // console.log(result);
+      console.log(result);
       // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
       this.statData = Object.values(result);
       this.offstat = this.statData[0];
@@ -29,7 +29,7 @@ export class Tab1Page {
 
   getDomicile() {
     this.api.getStatgeneralDomicile().subscribe(result => {
-      // console.log(result);
+      console.log(result);
       // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
       this.statData = Object.values(result);
       this.offstat = this.statData[0];
@@ -42,7 +42,7 @@ export class Tab1Page {
 
   getExterieur() {
     this.api.getStatgeneralExterieur().subscribe(result => {
-      // console.log(result);
+      console.log(result);
       // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
       this.statData = Object.values(result);
       this.offstat = this.statData[0];
