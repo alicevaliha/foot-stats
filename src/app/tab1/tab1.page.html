@@ -14,9 +14,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-item>
-    <ion-button (click)='getJoueurs()'>Général</ion-button>
-    <ion-button (click)='getJoueurs()'>Domicile</ion-button>
-    <ion-button (click)='getJoueurs()'>Exterieur</ion-button>
+    <ion-button (click)='getGeneral()'>Général</ion-button>
+    <ion-button (click)='getDomicile()'>Domicile</ion-button>
+    <ion-button (click)='getExterieur()'>Exterieur</ion-button>
   </ion-item>
   <table datatable border="1">
       <tr>
@@ -27,8 +27,21 @@
         <th>Discipline</th>
         <th>Possession%</th>
         <th>Passes réussies%</th>
-        <th>Aériens gagnées</th>
         <th>Note</th>
+      </tr>
+      <tr *ngFor=" let item of statData">
+        <td>{{item.equipe}}</td>
+        <td>{{item.competition_buts}}</td>
+        <td>{{item.total_buts}}</td>
+        <td>{{item.moyenne_tirs_par_match | number:'1.1-1'}}</td>
+        <td>
+          <span style="color:red">{{item.total_cartons_rouges}}</span>
+            -
+          <span style="color:rgb(255, 230, 0)">{{item.total_cartons_jaunes}}</span>
+        </td>
+        <td>{{ item.moyenne_possession_par_match | number:'1.1-1' }} %</td>
+        <td>{{item.pourcentage_passes_reussies | number:'1.1-1' }}</td>
+        <td>---</td>
       </tr>
   </table>
 

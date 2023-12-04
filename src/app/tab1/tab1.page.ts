@@ -8,12 +8,50 @@ import { ApiService } from '../api.service';
 })
 export class Tab1Page {
 
-  constructor(public api:ApiService) {}
-  
-  getJoueurs(){
-      this.api.getJoueurs().subscribe(result => {
-        console.log(result);
-      });
+  statData: any[] = [];
+  offstat: any;
+  constructor(public api:ApiService) {
+    this.getGeneral();
   }
+  
+  getGeneral() {
+    this.api.getStatgeneral().subscribe(result => {
+      // console.log(result);
+      // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
+      this.statData = Object.values(result);
+      this.offstat = this.statData[0];
+      this.statData = this.offstat;
+      // console.log('statData:', this.statData);
+      // console.log('offstat:', this.offstat);
+
+    });
+  }
+
+  getDomicile() {
+    this.api.getStatgeneralDomicile().subscribe(result => {
+      // console.log(result);
+      // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
+      this.statData = Object.values(result);
+      this.offstat = this.statData[0];
+      this.statData = this.offstat;
+      // console.log('statData:', this.statData);
+      // console.log('offstat:', this.offstat);
+
+    });
+  }
+
+  getExterieur() {
+    this.api.getStatgeneralExterieur().subscribe(result => {
+      // console.log(result);
+      // Utilisez Object.values pour obtenir les valeurs de l'objet en tant que tableau
+      this.statData = Object.values(result);
+      this.offstat = this.statData[0];
+      this.statData = this.offstat;
+      // console.log('statData:', this.statData);
+      // console.log('offstat:', this.offstat);
+
+    });
+  }
+  
 
 }
